@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroChatBtn = document.querySelector('.hero-chat-btn');
     const chatField = document.querySelector('.chat-field');
     const chatDialog = document.querySelector('.chat-dialog');
+    const toolSearch = document.getElementById('toolSearch');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const toolItems = document.querySelectorAll('.tool-item');
 
     // 阻止整个聊天区域的默认事件
     const heroChat = document.querySelector('.hero-chat');
@@ -205,5 +208,33 @@ document.addEventListener('DOMContentLoaded', function() {
         response += '\n\n你可以问我关于AI学习、Stable Diffusion使用、项目经验等方面的问题。';
         
         return response;
+    }
+
+    // 搜索功能
+    toolSearch.addEventListener('input', filterTools);
+
+    // 分类筛选
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterTools();
+        });
+    });
+
+    function filterTools() {
+        const searchTerm = toolSearch.value.toLowerCase();
+        const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+
+        toolItems.forEach(item => {
+            const title = item.querySelector('h3').textContent.toLowerCase();
+            const description = item.querySelector('p').textContent.toLowerCase();
+            const category = item.dataset.category;
+            
+            const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+            const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+            item.style.display = matchesSearch && matchesCategory ? 'flex' : 'none';
+        });
     }
 }); 

@@ -31,46 +31,194 @@
         <section class="page-content">
             <div class="section-content">
                 <div class="content-container">
+                    <!-- 学习路线图 -->
                     <div class="learning-section">
-                        <h2>基础概念</h2>
-                        <div class="learning-points">
-                            <ul>
-                                <li>理解 Stable Diffusion 的工作原理</li>
-                                <li>掌握提示词（Prompt）的基本写法</li>
-                                <li>了解关键参数的作用和调整方法</li>
-                                <li>学习基础的图像生成技巧</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="learning-section">
-                        <h2>实践练习</h2>
-                        <div class="practice-examples">
-                            <div class="example">
-                                <h3>基础提示词练习</h3>
-                                <pre class="prompt-code">
-masterpiece, best quality, 1girl, white hair, 
-blue eyes, detailed face, looking at viewer
-Negative prompt: bad quality, worst quality
-Steps: 20, Sampler: Euler a, CFG scale: 7
-                                </pre>
+                        <h2>学习路线图</h2>
+                        <div class="knowledge-map">
+                            <!-- 基础入门 -->
+                            <div class="knowledge-branch">
+                                <div class="main-node">
+                                    <h3>基础入门</h3>
+                                </div>
+                                <div class="sub-nodes">
+                                    <div class="sub-node">
+                                        <h4>软件安装</h4>
+                                        <ul>
+                                            <li>环境配置</li>
+                                            <li>WebUI安装</li>
+                                            <li>基础插件</li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-node">
+                                        <h4>基本操作</h4>
+                                        <ul>
+                                            <li>界面介绍</li>
+                                            <li>参数设置</li>
+                                            <li>模型使用</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- 可以添加更多示例 -->
+
+                            <!-- 提示词学习 -->
+                            <div class="knowledge-branch">
+                                <div class="main-node">
+                                    <h3>提示词学习</h3>
+                                </div>
+                                <div class="sub-nodes">
+                                    <div class="sub-node">
+                                        <h4>基础词汇</h4>
+                                        <ul>
+                                            <li>人物描述</li>
+                                            <li>场景描述</li>
+                                            <li>风格词汇</li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-node">
+                                        <h4>进阶技巧</h4>
+                                        <ul>
+                                            <li>权重设置</li>
+                                            <li>组合应用</li>
+                                            <li>负面提示</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 进阶技术 -->
+                            <div class="knowledge-branch">
+                                <div class="main-node">
+                                    <h3>进阶技术</h3>
+                                </div>
+                                <div class="sub-nodes">
+                                    <div class="sub-node">
+                                        <h4>高级功能</h4>
+                                        <ul>
+                                            <li>ControlNet</li>
+                                            <li>LoRA训练</li>
+                                            <li>图像修复</li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-node">
+                                        <h4>工作流程</h4>
+                                        <ul>
+                                            <li>批量处理</li>
+                                            <li>效果优化</li>
+                                            <li>后期处理</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- 学习资源 -->
                     <div class="learning-section">
                         <h2>学习资源</h2>
-                        <div class="resource-links">
-                            <a href="#" class="resource-link">
-                                <span class="resource-title">基础教程</span>
-                                <span class="resource-desc">从零开始的 Stable Diffusion 入门指南</span>
-                            </a>
-                            <a href="#" class="resource-link">
-                                <span class="resource-title">提示词教程</span>
-                                <span class="resource-desc">如何编写高质量的提示词</span>
-                            </a>
-                            <!-- 可以添加更多资源链接 -->
+                        
+                        <!-- 视频教程 -->
+                        <div class="learning-points video-tutorials">
+                            <h3>精选视频教程</h3>
+                            <ul>
+                                <li>
+                                    <a href="https://www.bilibili.com/video/BV1iM4y1y7oA" target="_blank">
+                                        <h4>Stable Diffusion 零基础入门</h4>
+                                        <p>完整的安装和基础使用教程，带你从零开始掌握AI绘画</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.bilibili.com/video/BV1As4y127HW" target="_blank">
+                                        <h4>WebUI详细使用指南</h4>
+                                        <p>深入讲解提示词编写和参数设置，提升AI创作效果</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.bilibili.com/video/BV1fs4y1x7p2" target="_blank">
+                                        <h4>LoRA 模型训练教程</h4>
+                                        <p>从零开始学习训练自己的LoRA模型，打造个性化风格</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.bilibili.com/video/BV1Bm4y1J7bR" target="_blank">
+                                        <h4>ControlNet 进阶指南</h4>
+                                        <p>掌握ControlNet的完整使用方法，实现精确的图像控制</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 提示词资源 -->
+                        <div class="learning-points prompts">
+                            <h3>提示词资源</h3>
+                            <ul>
+                                <li>1girl/1boy (单个人物)</li>
+                                <li>long hair/short hair (长发/短发)</li>
+                                <li>blonde/black/white/blue hair (金/黑/白/蓝发)</li>
+                                <li>blue/red/green eyes (蓝/红/绿眼)</li>
+                                <li>smile/crying/angry (微笑/哭泣/生气)</li>
+                                <li>young/mature (年轻/成熟)</li>
+                                <li>beautiful/handsome (漂亮/帅气)</li>
+                                <li>tall/short (高/矮)</li>
+                            </ul>
+                        </div>
+
+                        <!-- 服装描述 -->
+                        <div class="learning-points clothing-description">
+                            <h3>服装描述</h3>
+                            <ul>
+                                <li>casual wear (休闲装)</li>
+                                <li>formal attire (正式服装)</li>
+                                <li>sportswear (运动服)</li>
+                                <li>dress/suit (连衣裙/西装)</li>
+                                <li>uniform/casual wear (制服/休闲服)</li>
+                                <li>kimono/yukata (和服/浴衣)</li>
+                                <li>armor/medieval clothing (盔甲/中世纪服装)</li>
+                                <li>modern clothes (现代服装)</li>
+                                <li>traditional clothes (传统服装)</li>
+                                <li>formal wear (正装)</li>
+                            </ul>
+                        </div>
+
+                        <div class="learning-points">
+                            <h3>场景氛围</h3>
+                            <ul>
+                                <li>sunset/sunrise (日落/日出)</li>
+                                <li>night sky/starry sky (夜空/星空)</li>
+                                <li>rain/snow/sunny (雨/雪/晴天)</li>
+                                <li>cherry blossoms (樱花)</li>
+                                <li>autumn leaves (秋叶)</li>
+                                <li>flower field (花田)</li>
+                                <li>city street (城市街道)</li>
+                                <li>fantasy world (奇幻世界)</li>
+                            </ul>
+                        </div>
+
+                        <div class="learning-points">
+                            <h3>画面效果</h3>
+                            <ul>
+                                <li>depth of field (景深)</li>
+                                <li>bokeh effect (散景效果)</li>
+                                <li>motion blur (动态模糊)</li>
+                                <li>lens flare (镜头光晕)</li>
+                                <li>bloom effect (泛光效果)</li>
+                                <li>particle effects (粒子效果)</li>
+                                <li>glowing (发光)</li>
+                                <li>reflection (反射)</li>
+                            </ul>
+                        </div>
+
+                        <div class="learning-points">
+                            <h3>艺术风格</h3>
+                            <ul>
+                                <li>impressionism (印象派)</li>
+                                <li>art nouveau (新艺术风格)</li>
+                                <li>cyberpunk (赛博朋克)</li>
+                                <li>steampunk (蒸汽朋克)</li>
+                                <li>minimalist (极简主义)</li>
+                                <li>pop art (波普艺术)</li>
+                                <li>ukiyo-e (浮世绘)</li>
+                                <li>gothic (哥特风格)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

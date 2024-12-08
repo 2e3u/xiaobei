@@ -8,6 +8,7 @@
     <script src="script.js" defer></script>
     <meta name="domain" content="2e3u.github.io">
     <link rel="canonical" href="https://2e3u.github.io">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -51,25 +52,429 @@
             </div>
         </section>
 
+        <section id="tools" class="feature-section tools-section">
+            <div class="section-content">
+                <h2>实用工具</h2>
+                
+                <!-- 搜索栏 -->
+                <div class="tools-search">
+                    <div class="search-box">
+                        <i class="ri-search-line"></i>
+                        <input type="text" id="toolSearch" placeholder="搜索工具...">
+                    </div>
+                </div>
+
+                <!-- 分类筛选按钮 -->
+                <div class="tools-filter">
+                    <button class="filter-btn active" data-category="all">全部</button>
+                    <button class="filter-btn" data-category="ai">AI工具</button>
+                    <button class="filter-btn" data-category="dev">开发工具</button>
+                    <button class="filter-btn" data-category="design">设计工具</button>
+                    <button class="filter-btn" data-category="learn">学习平台</button>
+                    <button class="filter-btn" data-category="office">办公工具</button>
+                    <button class="filter-btn" data-category="utility">实用工具</button>
+                </div>
+
+                <!-- 工具卡片网格 -->
+                <div class="tools-grid">
+                    <!-- AI工具 -->
+                    <a href="https://chat.openai.com" class="tool-item" data-category="ai" target="_blank">
+                        <div class="tool-icon"><i class="ri-robot-2-line"></i></div>
+                        <h3>ChatGPT</h3>
+                        <p>强大的AI对话助手</p>
+                    </a>
+
+                    <a href="https://claude.ai" class="tool-item" data-category="ai" target="_blank">
+                        <div class="tool-icon"><i class="ri-brain-line"></i></div>
+                        <h3>Claude</h3>
+                        <p>Anthropic开发的AI助手</p>
+                    </a>
+
+                    <!-- 开发工具 -->
+                    <a href="https://github.dev" class="tool-item" data-category="dev" target="_blank">
+                        <div class="tool-icon"><i class="ri-github-line"></i></div>
+                        <h3>GitHub.dev</h3>
+                        <p>在线代码编辑器</p>
+                    </a>
+
+                    <a href="https://codesandbox.io" class="tool-item" data-category="dev" target="_blank">
+                        <div class="tool-icon"><i class="ri-code-box-line"></i></div>
+                        <h3>CodeSandbox</h3>
+                        <p>在线代码沙盒环境</p>
+                    </a>
+
+                    <!-- 设计工具 -->
+                    <a href="https://www.figma.com" class="tool-item" data-category="design" target="_blank">
+                        <div class="tool-icon"><i class="ri-pen-nib-line"></i></div>
+                        <h3>Figma</h3>
+                        <p>专业的在线设计工具</p>
+                    </a>
+
+                    <a href="https://www.canva.com" class="tool-item" data-category="design" target="_blank">
+                        <div class="tool-icon"><i class="ri-palette-line"></i></div>
+                        <h3>Canva</h3>
+                        <p>简单易用的设计平台</p>
+                    </a>
+
+                    <!-- 学习平台 -->
+                    <a href="https://www.coursera.org" class="tool-item" data-category="learn" target="_blank">
+                        <div class="tool-icon"><i class="ri-graduation-cap-line"></i></div>
+                        <h3>Coursera</h3>
+                        <p>全球知名在线课程平台</p>
+                    </a>
+
+                    <a href="https://www.kaggle.com" class="tool-item" data-category="learn" target="_blank">
+                        <div class="tool-icon"><i class="ri-bar-chart-box-line"></i></div>
+                        <h3>Kaggle</h3>
+                        <p>数据科学学习平台</p>
+                    </a>
+
+                    <!-- 办公工具 -->
+                    <a href="https://www.notion.so" class="tool-item" data-category="office" target="_blank">
+                        <div class="tool-icon"><i class="ri-sticky-note-line"></i></div>
+                        <h3>Notion</h3>
+                        <p>多功能协作笔记工具</p>
+                    </a>
+
+                    <a href="https://trello.com" class="tool-item" data-category="office" target="_blank">
+                        <div class="tool-icon"><i class="ri-task-line"></i></div>
+                        <h3>Trello</h3>
+                        <p>项目管理协作工具</p>
+                    </a>
+
+                    <!-- 图片工具 -->
+                    <a href="https://www.remove.bg" class="tool-item" data-category="image" target="_blank">
+                        <div class="tool-icon"><i class="ri-scissors-cut-line"></i></div>
+                        <h3>Remove.bg</h3>
+                        <p>智能抠图工具</p>
+                    </a>
+
+                    <a href="https://pixlr.com" class="tool-item" data-category="image" target="_blank">
+                        <div class="tool-icon"><i class="ri-brush-3-line"></i></div>
+                        <h3>Pixlr</h3>
+                        <p>在线图片编辑器</p>
+                    </a>
+
+                    <!-- 实用工具 -->
+                    <a href="https://tinypng.com" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-image-edit-line"></i></div>
+                        <h3>TinyPNG</h3>
+                        <p>在线图片压缩工具</p>
+                    </a>
+
+                    <a href="https://www.ilovepdf.com" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-file-pdf-line"></i></div>
+                        <h3>iLovePDF</h3>
+                        <p>在线PDF处理工具</p>
+                    </a>
+
+                    <!-- 视频工具 -->
+                    <a href="https://www.kapwing.com" class="tool-item" data-category="video" target="_blank">
+                        <div class="tool-icon"><i class="ri-movie-2-line"></i></div>
+                        <h3>Kapwing</h3>
+                        <p>在线视频编辑器</p>
+                    </a>
+
+                    <a href="https://www.veed.io" class="tool-item" data-category="video" target="_blank">
+                        <div class="tool-icon"><i class="ri-video-edit-line"></i></div>
+                        <h3>VEED</h3>
+                        <p>专业视频编辑平台</p>
+                    </a>
+
+                    <!-- 音频工具 -->
+                    <a href="https://audiomass.co" class="tool-item" data-category="audio" target="_blank">
+                        <div class="tool-icon"><i class="ri-sound-module-line"></i></div>
+                        <h3>AudioMass</h3>
+                        <p>在线音频编辑器</p>
+                    </a>
+
+                    <!-- 文档工具 -->
+                    <a href="https://www.overleaf.com" class="tool-item" data-category="doc" target="_blank">
+                        <div class="tool-icon"><i class="ri-file-text-line"></i></div>
+                        <h3>Overleaf</h3>
+                        <p>在线LaTeX编辑器</p>
+                    </a>
+
+                    <!-- 生产力工具 -->
+                    <a href="https://www.grammarly.com" class="tool-item" data-category="productivity" target="_blank">
+                        <div class="tool-icon"><i class="ri-quill-pen-line"></i></div>
+                        <h3>Grammarly</h3>
+                        <p>英文写作助手</p>
+                    </a>
+
+                    <a href="https://www.mindmeister.com" class="tool-item" data-category="productivity" target="_blank">
+                        <div class="tool-icon"><i class="ri-mind-map"></i></div>
+                        <h3>MindMeister</h3>
+                        <p>在线思维导图工具</p>
+                    </a>
+
+                    <!-- 编程学习 -->
+                    <a href="https://leetcode.com" class="tool-item" data-category="coding" target="_blank">
+                        <div class="tool-icon"><i class="ri-bug-line"></i></div>
+                        <h3>LeetCode</h3>
+                        <p>编程题目练习平台</p>
+                    </a>
+
+                    <a href="https://www.codecademy.com" class="tool-item" data-category="coding" target="_blank">
+                        <div class="tool-icon"><i class="ri-terminal-box-line"></i></div>
+                        <h3>Codecademy</h3>
+                        <p>交互式编程学习</p>
+                    </a>
+
+                    <!-- 实用工具 -->
+                    <a href="https://www.aconvert.com/cn/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-file-transfer-line"></i></div>
+                        <h3>Aconvert</h3>
+                        <p>在线格式转换工具</p>
+                    </a>
+
+                    <a href="https://bigjpg.com/" class="tool-item" data-category="image" target="_blank">
+                        <div class="tool-icon"><i class="ri-image-2-line"></i></div>
+                        <h3>BigJPG</h3>
+                        <p>AI图片无损放大</p>
+                    </a>
+
+                    <a href="https://www.processon.com/" class="tool-item" data-category="design" target="_blank">
+                        <div class="tool-icon"><i class="ri-mind-map"></i></div>
+                        <h3>ProcessOn</h3>
+                        <p>在线流程图思维导图</p>
+                    </a>
+
+                    <a href="https://www.uupoop.com/" class="tool-item" data-category="image" target="_blank">
+                        <div class="tool-icon"><i class="ri-brush-line"></i></div>
+                        <h3>UUPOOP</h3>
+                        <p>在线PS工具</p>
+                    </a>
+
+                    <a href="https://www.gaoding.com/" class="tool-item" data-category="design" target="_blank">
+                        <div class="tool-icon"><i class="ri-palette-line"></i></div>
+                        <h3>稿定设计</h3>
+                        <p>在线设计制作工具</p>
+                    </a>
+
+                    <a href="https://www.photopea.com/" class="tool-item" data-category="image" target="_blank">
+                        <div class="tool-icon"><i class="ri-picture-in-picture-line"></i></div>
+                        <h3>Photopea</h3>
+                        <p>免费在线PS替代工具</p>
+                    </a>
+
+                    <a href="https://cli.im/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-qr-code-line"></i></div>
+                        <h3>草料二维码</h3>
+                        <p>二维码生成器</p>
+                    </a>
+
+                    <a href="https://www.toolnb.com/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-tools-line"></i></div>
+                        <h3>爱资料工具</h3>
+                        <p>在线工具集合</p>
+                    </a>
+
+                    <a href="https://www.alltoall.net/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-switch-line"></i></div>
+                        <h3>AllToAll</h3>
+                        <p>在线格式转换工具</p>
+                    </a>
+
+                    <a href="https://www.geogebra.org/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-compass-2-line"></i></div>
+                        <h3>GeoGebra</h3>
+                        <p>在线数学工具</p>
+                    </a>
+
+                    <!-- 继续添加更多工具 -->
+                    <a href="https://www.135editor.com" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-article-line"></i></div>
+                        <h3>135编辑器</h3>
+                        <p>微信排版编辑器</p>
+                    </a>
+
+                    <a href="https://www.docsmall.com/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-file-reduce-line"></i></div>
+                        <h3>DocSmall</h3>
+                        <p>在线文件压缩工具</p>
+                    </a>
+
+                    <a href="https://www.diyiziti.com/" class="tool-item" data-category="design" target="_blank">
+                        <div class="tool-icon"><i class="ri-font-size-2"></i></div>
+                        <h3>第一字体</h3>
+                        <p>免费字体下载转换</p>
+                    </a>
+
+                    <a href="https://www.gjfont.com/" class="tool-item" data-category="design" target="_blank">
+                        <div class="tool-icon"><i class="ri-font-size"></i></div>
+                        <h3>字体工具</h3>
+                        <p>在线字体转换器</p>
+                    </a>
+
+                    <a href="https://www.iconfont.cn/" class="tool-item" data-category="design" target="_blank">
+                        <div class="tool-icon"><i class="ri-remixicon-line"></i></div>
+                        <h3>Iconfont</h3>
+                        <p>阿里巴巴矢量图标库</p>
+                    </a>
+
+                    <a href="https://www.shipinjiance.com/" class="tool-item" data-category="video" target="_blank">
+                        <div class="tool-icon"><i class="ri-video-line"></i></div>
+                        <h3>视频鉴别</h3>
+                        <p>视频无损检测工具</p>
+                    </a>
+
+                    <a href="https://www.wenshushu.cn/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-file-transfer-line"></i></div>
+                        <h3>文叔叔</h3>
+                        <p>免费大文件传输</p>
+                    </a>
+
+                    <a href="https://www.mdnice.com/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-markdown-line"></i></div>
+                        <h3>MDnice</h3>
+                        <p>Markdown排版工具</p>
+                    </a>
+
+                    <a href="https://www.json.cn/" class="tool-item" data-category="dev" target="_blank">
+                        <div class="tool-icon"><i class="ri-braces-line"></i></div>
+                        <h3>JSON在线解析</h3>
+                        <p>JSON格式化工具</p>
+                    </a>
+
+                    <a href="https://www.bejson.com/" class="tool-item" data-category="dev" target="_blank">
+                        <div class="tool-icon"><i class="ri-code-line"></i></div>
+                        <h3>BeJSON</h3>
+                        <p>在线代码格式化工具</p>
+                    </a>
+
+                    <a href="https://www.fly63.com/tool/home.html" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-tools-fill"></i></div>
+                        <h3>云间工具</h3>
+                        <p>综合在线工具箱</p>
+                    </a>
+
+                    <a href="https://www.qtool.net/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-tools-line"></i></div>
+                        <h3>爱Q工具网</h3>
+                        <p>站长工具集合</p>
+                    </a>
+
+                    <!-- 图片工具 -->
+                    <a href="https://www.iloveimg.com/zh-cn" class="tool-item" data-category="image" target="_blank">
+                        <div class="tool-icon"><i class="ri-image-edit-fill"></i></div>
+                        <h3>ILoveIMG</h3>
+                        <p>图片编辑处理工具</p>
+                    </a>
+
+                    <a href="https://www.yasuotu.com/" class="tool-item" data-category="image" target="_blank">
+                        <div class="tool-icon"><i class="ri-compasses-2-line"></i></div>
+                        <h3>压缩图</h3>
+                        <p>在线图片压缩工具</p>
+                    </a>
+
+                    <!-- 视频工具 -->
+                    <a href="https://online.mediaconvert.cn/" class="tool-item" data-category="video" target="_blank">
+                        <div class="tool-icon"><i class="ri-movie-line"></i></div>
+                        <h3>在线视频转换</h3>
+                        <p>视频格式转换工具</p>
+                    </a>
+
+                    <a href="https://www.soogif.com/" class="tool-item" data-category="video" target="_blank">
+                        <div class="tool-icon"><i class="ri-film-line"></i></div>
+                        <h3>SOOGIF</h3>
+                        <p>GIF制作编辑工具</p>
+                    </a>
+
+                    <!-- 开发工具 -->
+                    <a href="https://tool.lu/" class="tool-item" data-category="dev" target="_blank">
+                        <div class="tool-icon"><i class="ri-tools-line"></i></div>
+                        <h3>在线工具</h3>
+                        <p>程序员工具箱</p>
+                    </a>
+
+                    <a href="https://www.bootcdn.cn/" class="tool-item" data-category="dev" target="_blank">
+                        <div class="tool-icon"><i class="ri-cloud-line"></i></div>
+                        <h3>BootCDN</h3>
+                        <p>开源项目 CDN 加速</p>
+                    </a>
+
+                    <!-- 设计工具 -->
+                    <a href="https://www.58pic.com/tupian/" class="tool-item" data-category="design" target="_blank">
+                        <div class="tool-icon"><i class="ri-gallery-line"></i></div>
+                        <h3>千图网</h3>
+                        <p>免费设计素材</p>
+                    </a>
+
+                    <a href="https://www.logosc.cn/" class="tool-item" data-category="design" target="_blank">
+                        <div class="tool-icon"><i class="ri-brush-fill"></i></div>
+                        <h3>标小智</h3>
+                        <p>AI智能LOGO设计</p>
+                    </a>
+
+                    <!-- 办公工具 -->
+                    <a href="https://www.kdocs.cn/" class="tool-item" data-category="office" target="_blank">
+                        <div class="tool-icon"><i class="ri-file-word-line"></i></div>
+                        <h3>金山文档</h3>
+                        <p>在线协作文档</p>
+                    </a>
+
+                    <a href="https://shimo.im/" class="tool-item" data-category="office" target="_blank">
+                        <div class="tool-icon"><i class="ri-file-paper-line"></i></div>
+                        <h3>石墨文档</h3>
+                        <p>在线协作办公</p>
+                    </a>
+
+                    <!-- 学习工具 -->
+                    <a href="https://www.wolai.com/" class="tool-item" data-category="learn" target="_blank">
+                        <div class="tool-icon"><i class="ri-book-2-line"></i></div>
+                        <h3>我来</h3>
+                        <p>在线笔记与知识库</p>
+                    </a>
+
+                    <a href="https://www.yuque.com/" class="tool-item" data-category="learn" target="_blank">
+                        <div class="tool-icon"><i class="ri-book-open-line"></i></div>
+                        <h3>语雀</h3>
+                        <p>知识创作与分享</p>
+                    </a>
+
+                    <!-- 实用工具 -->
+                    <a href="https://www.toolfk.com/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-hammer-line"></i></div>
+                        <h3>Tool FK</h3>
+                        <p>在线工具大全</p>
+                    </a>
+
+                    <a href="https://convertio.co/zh/" class="tool-item" data-category="utility" target="_blank">
+                        <div class="tool-icon"><i class="ri-file-copy-line"></i></div>
+                        <h3>Convertio</h3>
+                        <p>在线文件转换器</p>
+                    </a>
+
+                    <!-- AI工具 -->
+                    <a href="https://yiyan.baidu.com" class="tool-item" data-category="ai" target="_blank">
+                        <div class="tool-icon"><i class="ri-robot-line"></i></div>
+                        <h3>文心一言</h3>
+                        <p>百度AI对话助手</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <section id="stable-diffusion" class="feature-section">
             <div class="section-content">
                 <h2>Stable Diffusion 学习历程</h2>
                 <div class="timeline">
-                    <div class="timeline-item">
+                    <div class="timeline-item short">
                         <div class="timeline-content clickable" onclick="window.location.href='pages/beginner.html'">
                             <h3>入门阶段</h3>
                             <p>从零开始学习Stable Diffusion的基础知识，理解AI绘画的核心概念。掌握基本的提示词编写和参数调整技巧。</p>
                             <div class="placeholder-image">基础学习阶段</div>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item short">
                         <div class="timeline-content clickable" onclick="window.location.href='pages/advanced.html'">
                             <h3>进阶实践</h3>
-                            <p>深学习LoRA训练、模型融合等进阶技术，探索个性化模型的训练法。</p>
+                            <p>深入学习LoRA训练、模型融合等进阶技术。</p>
                             <div class="placeholder-image">进阶学习阶段</div>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item short">
                         <div class="timeline-content clickable" onclick="window.location.href='pages/portfolio.html'">
                             <h3>作品成果</h3>
                             <p>运用所学知识创作个人作品，探索AI艺术的无限可能。</p>
@@ -91,7 +496,7 @@
                     <div class="timeline-item">
                         <div class="timeline-content clickable" onclick="window.location.href='pages/development.html'">
                             <h3>开发环境搭建</h3>
-                            <p>使用现代化的云开发工具搭建个人网站。通过 Devbox 实现云端开发环境，利用 Cursor AI 辅助编码，最终部署上线完整的个人网站。</p>
+                            <p>使用现代化的云开发工具搭建个人网站。通过 Devbox 实现云端开发环境，利 Cursor AI 辅助码，最终部署上线完整的个人网站。</p>
                             <div class="learning-points">
                                 <ul>
                                     <li> Devbox 搭建云端开发环境</li>
@@ -139,7 +544,7 @@
                                     <ul>
                                         <li>算术运算符</li>
                                         <li>关系运算符</li>
-                                        <li>逻辑运���符</li>
+                                        <li>逻辑运符</li>
                                         <li>位运符</li>
                                     </ul>
                                 </div>
@@ -175,7 +580,7 @@
                                 <h4>指针</h4>
                                 <div class="learning-points">
                                     <ul>
-                                        <li>指针基础概念</li>
+                                        <li>针基础概念</li>
                                         <li>指与数组</li>
                                         <li>指针与函数</li>
                                         <li>多级指针</li>
@@ -308,69 +713,11 @@
                 </div>
             </div>
         </section>
-
-        <section id="tools" class="feature-section">
-            <div class="section-content">
-                <h2>实用工具</h2>
-                <div class="tools-grid">
-                    <!-- AI 工具 -->
-                    <div class="tool-card">
-                        <h3>AI 辅助工具</h3>
-                        <div class="tool-list">
-                            <a href="pages/tools.html#prompt-generator" class="tool-item">
-                                <span class="tool-icon">🎨</span>
-                                <h4>提示词生成器</h4>
-                                <p>智能生成 Stable Diffusion 提示词</p>
-                            </a>
-                            <a href="pages/tools.html#image-analyzer" class="tool-item">
-                                <span class="tool-icon">🔍</span>
-                                <h4>图像分析器</h4>
-                                <p>分析AI生成图片的参数和特征</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- 开发工具 -->
-                    <div class="tool-card">
-                        <h3>开发工具</h3>
-                        <div class="tool-list">
-                            <a href="pages/c/compiler.html" class="tool-item">
-                                <span class="tool-icon">💻</span>
-                                <h4>在线编译器</h4>
-                                <p>C语言在线编译和运行</p>
-                            </a>
-                            <a href="pages/tools.html#code-formatter" class="tool-item">
-                                <span class="tool-icon">📝</span>
-                                <h4>代码格式化</h4>
-                                <p>美化和规范化代码格式</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- 学习资源 -->
-                    <div class="tool-card">
-                        <h3>学习资源</h3>
-                        <div class="tool-list">
-                            <a href="pages/tools.html#tutorials" class="tool-item">
-                                <span class="tool-icon">📚</span>
-                                <h4>教程中心</h4>
-                                <p>技术学习指南和教程</p>
-                            </a>
-                            <a href="pages/tools.html#resources" class="tool-item">
-                                <span class="tool-icon">📦</span>
-                                <h4>资源下载</h4>
-                                <p>软件和学习资料</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 王小北的AI学习之旅. 保留所有权利。</p>
-        <p>备案号：正在备案中</p>
     </footer>
 </body>
+</html> 
 </html> 

@@ -501,34 +501,38 @@ input:focus, textarea:focus {
 
 /* 学习要点样式 */
 .learning-points {
-    margin-top: auto;
+    background: #ffffff;
     padding: 1.5rem;
-    background: rgba(0, 102, 204, 0.05);
-    border-radius: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.learning-points h3 {
+    color: #333333;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .learning-points ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .learning-points li {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
     position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-    color: #666;
-    font-size: 1.4rem;
-    line-height: 1.8;
+    color: #555555;
+    font-size: 1rem;
 }
 
 .learning-points li::before {
-    content: "•";
-    color: #0066cc;
-    font-size: 1.2rem;
+    content: '•';
     position: absolute;
     left: 0;
-    top: -0.1rem;
+    color: #0071e3;
+    font-size: 1.2rem;
 }
 
 /* 技术标签样式 */
@@ -657,7 +661,11 @@ input:focus, textarea:focus {
 
 /* 学习页面样式 */
 .learning-section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #f5f5f7;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .learning-section h2 {
@@ -1168,7 +1176,7 @@ input:focus, textarea:focus {
     top: -0.1rem;
 }
 
-/* C语言学习板块样式 */
+/* C语言学习板块样 */
 .c-programming-section {
     padding: 40px 0;
     background: #f8f9fa;
@@ -1321,7 +1329,6 @@ input:focus, textarea:focus {
         grid-template-columns: 1fr;
     }
 }
-
 /* 添加滚动条样式 */
 .code-example pre::-webkit-scrollbar {
     width: 8px;
@@ -1455,7 +1462,7 @@ input:focus, textarea:focus {
     }
 }
 
-/* 重要知识点样式 */
+/* 重要知识点样 */
 .key-points {
     margin-top: auto;
     padding: 1.5rem;
@@ -1630,4 +1637,363 @@ input:focus, textarea:focus {
 
 .resource-list a:hover {
     text-decoration: underline;
-} 
+}
+
+/* 筛选按钮样式 */
+.filter-btn {
+    background: none;
+    border: 1px solid #1d1d1f;
+    color: #1d1d1f;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.filter-btn:hover {
+    background: rgba(29, 29, 31, 0.05);
+}
+
+.filter-btn.active {
+    background: #1d1d1f;
+    color: #ffffff;
+    border-color: #1d1d1f;
+}
+
+.tools-filter {
+    display: flex;
+    justify-content: center;
+}
+
+.tools-search {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.search-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.8rem;
+}
+
+.search-box i {
+    color: #1d1d1f;
+    font-size: 20px;
+    margin-right: 1.2rem;
+}
+
+.search-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #1d1d1f;
+}
+
+.search-box input::placeholder {
+    color: rgba(29, 29, 31, 0.6);
+}
+
+.search-box:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* 在现有样式后添加工具卡片样式 */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.tool-item {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #1d1d1f;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tool-item .tool-icon {
+    margin-bottom: 1rem;
+}
+
+.tool-item .tool-icon i {
+    font-size: 28px;
+    color: #1d1d1f;
+}
+
+.tool-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tool-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+.workflow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.workflow-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.workflow-item:hover {
+    transform: translateY(-5px);
+}
+
+.workflow-icon {
+    font-size: 2.4rem;
+    color: #0066cc;
+    margin-bottom: 1rem;
+}
+
+.workflow-item h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.workflow-item ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.workflow-item li {
+    color: #666;
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.workflow-item li::before {
+    content: "•";
+    color: #0066cc;
+    position: absolute;
+    left: 0;
+}
+
+.workflow-arrow {
+    color: #0066cc;
+    font-size: 2rem;
+    margin: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .workflow {
+        flex-direction: column;
+    }
+    
+    .workflow-arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+}
+
+/* 学习路线图整体布局 */
+.knowledge-map {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background: #f5f5f7;
+    border-radius: 20px;
+    margin: 4rem 0;
+}
+
+/* 知识点卡片样式 */
+.knowledge-branch {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.knowledge-branch:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+/* 主节点样式 */
+.main-node {
+    margin-bottom: 1.5rem;
+}
+
+.main-node h3 {
+    font-size: 1.4rem;
+    color: #1d1d1f;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* 子节点容器 */
+.sub-nodes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 子节点样式 */
+.sub-node {
+    padding: 1.5rem;
+    background: #f5f5f7;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.sub-node h4 {
+    font-size: 1.1rem;
+    color: #1d1d1f;
+    margin-bottom: 0.8rem;
+}
+
+.sub-node ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-node li {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.sub-node li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #0066cc;
+}
+
+/* 移动端适配 */
+@media (max-width: 1024px) {
+    .knowledge-map {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .knowledge-map {
+        grid-template-columns: 1fr;
+    }
+    
+    .knowledge-branch {
+        padding: 1.5rem;
+    }
+}
+
+/* 学习资源部分的样式 */
+.learning-section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #f5f5f7;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 普通学习点样式（用于提示词等部分） */
+.learning-points {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.learning-points h3 {
+    color: #333333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.learning-points ul {
+    list-style: none;
+    padding: 0;
+}
+
+.learning-points li {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    position: relative;
+    color: #555555;
+    font-size: 1rem;
+}
+
+.learning-points li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #0071e3;
+    font-size: 1.2rem;
+}
+
+/* 保持视频教程的特殊样式 */
+.video-tutorials {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .learning-section {
+        padding: 1.5rem;
+    }
+    
+    .learning-points {
+        padding: 1.2rem;
+    }
+}
