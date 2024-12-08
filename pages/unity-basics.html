@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity基础 - 王小北的学习之旅</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">返回首页</a></li>
+                <li><a href="../index.html#c-programming">C语言学习</a></li>
+                <li><a href="../index.html#unity-2d">Unity开发</a></li>
+                <li><a href="../index.html#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">Unity 2D基础知识</h1>
+                <p class="page-subtitle">学习Unity引擎基础，掌握2D游戏开发核心概念</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <div class="content-container">
+                    <!-- Unity界面 -->
+                    <div class="learning-section">
+                        <h2>Unity界面介绍</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>Scene视图：场景编辑</li>
+                                <li>Game视图：游戏预览</li>
+                                <li>Hierarchy窗口：场景层级</li>
+                                <li>Project窗口：资源管理</li>
+                                <li>Inspector窗口：属性编辑</li>
+                            </ul>
+                        </div>
+                        <div class="image-example">
+                            <img src="../images/unity/interface.png" alt="Unity界面布局">
+                            <p class="image-caption">Unity编辑器界面布局说明</p>
+                        </div>
+                    </div>
+
+                    <!-- 游戏对象和组件 -->
+                    <div class="learning-section">
+                        <h2>游戏对象和组件</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>GameObject的概念</li>
+                                <li>Transform组件</li>
+                                <li>Sprite Renderer组件</li>
+                                <li>Rigidbody 2D组件</li>
+                                <li>Collider 2D组件</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>基本脚本示例</h3>
+                            <pre class="code-block">
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    private Rigidbody2D rb;
+    
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+    
+    void Update()
+    {
+        // 基本移动控制
+        float moveX = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveX * 5f, rb.velocity.y);
+    }
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 精灵和动画 -->
+                    <div class="learning-section">
+                        <h2>精灵和动画系统</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>Sprite导入设置</li>
+                                <li>Sprite切割工具</li>
+                                <li>Animation Controller</li>
+                                <li>创建和编辑动画片段</li>
+                                <li>动画状态机</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>动画控制示例</h3>
+                            <pre class="code-block">
+private Animator animator;
+
+void Start()
+{
+    animator = GetComponent<Animator>();
+}
+
+void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+        animator.SetTrigger("Jump");
+    }
+    
+    float moveX = Input.GetAxis("Horizontal");
+    animator.SetFloat("Speed", Mathf.Abs(moveX));
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 物理系统 -->
+                    <div class="learning-section">
+                        <h2>2D物理系统</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>刚体类型设置</li>
+                                <li>碰撞器形状</li>
+                                <li>物理材质</li>
+                                <li>射线检测</li>
+                                <li>触发器事件</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>碰撞检测示例</h3>
+                            <pre class="code-block">
+void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Ground"))
+    {
+        isGrounded = true;
+    }
+}
+
+void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("Coin"))
+    {
+        CollectCoin();
+        Destroy(other.gameObject);
+    }
+}
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 

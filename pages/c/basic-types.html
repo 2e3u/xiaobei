@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C语言基础类型 - 王小北的学习之旅</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">返回首页</a></li>
+                <li><a href="../../index.html#c-programming">C语言学习</a></li>
+                <li><a href="../../index.html#unity-2d">Unity开发</a></li>
+                <li><a href="../../pages/tools.html">实用工具</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">C语言基础类型</h1>
+                <p class="page-subtitle">掌握C语言的基本数据类型和变量声明</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <div class="content-container">
+                    <!-- 整数类型 -->
+                    <div class="learning-section">
+                        <h2>整数类型</h2>
+                        <div class="concept-explanation">
+                            <p>C语言提供了多种整数类型，用于表示不同范围的整数值。</p>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// 整数类型声明
+int age = 25;              // 标准整型
+short small = 123;         // 短整型
+long big = 1234567890L;    // 长整型
+unsigned int positive = 100;// 无符号整型
+
+// 整数类型的范围
+printf("int 类型范围：%d 到 %d\n", 
+    INT_MIN, INT_MAX);
+                            </pre>
+                        </div>
+                        <div class="key-points">
+                            <h3>要点说明</h3>
+                            <ul>
+                                <li>int 是最常用的整数类型</li>
+                                <li>使用 unsigned 表示无符号数</li>
+                                <li>long 用于存储较大的整数</li>
+                                <li>不同类型占用不同的内存空间</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 浮点类型 -->
+                    <div class="learning-section">
+                        <h2>浮点类型</h2>
+                        <div class="concept-explanation">
+                            <p>浮点类型用于表示小数，C语言提供了单精度和双精度两种浮点类型。</p>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// 浮点类型声明
+float price = 19.99f;       // 单精度浮点数
+double pi = 3.14159265359;  // 双精度浮点数
+
+// 科学计数法
+float scientific = 1.23e-4f;// 0.000123
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 字符类型 -->
+                    <div class="learning-section">
+                        <h2>字符类型</h2>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// 字符类型声明
+char grade = 'A';           // 字符
+char newline = '\n';        // 转义字符
+
+// ASCII值
+int ascii_value = grade;    // 65
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 练习题 -->
+                    <div class="practice-section">
+                        <h2>练习题</h2>
+                        <div class="exercise">
+                            <h3>练习1：类型转换</h3>
+                            <pre class="code-block">
+// 完成以下代码
+int x = 10;
+float y = _______;  // 将x转换为float类型
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 

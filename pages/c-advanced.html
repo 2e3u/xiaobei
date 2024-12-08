@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C语言进阶 - 王小北的学习之旅</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">返回首页</a></li>
+                <li><a href="../index.html#c-programming">C语言学习</a></li>
+                <li><a href="../index.html#unity-2d">Unity开发</a></li>
+                <li><a href="../index.html#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">C语言进阶概念</h1>
+                <p class="page-subtitle">深入学习C语言的高级特性和内存管理</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <div class="content-container">
+                    <!-- 指针 -->
+                    <div class="learning-section">
+                        <h2>指针基础</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>指针的概念和声明</li>
+                                <li>指针的运算</li>
+                                <li>指针和数组</li>
+                                <li>函数指针</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// 基本指针操作
+int num = 10;
+int* ptr = &num;
+printf("值: %d\n", *ptr);
+
+// 数组指针
+int arr[5] = {1, 2, 3, 4, 5};
+int* arrPtr = arr;
+printf("第一个元素: %d\n", *arrPtr);
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 内存管理 -->
+                    <div class="learning-section">
+                        <h2>动态内存管理</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>malloc() 和 free()</li>
+                                <li>动态数组</li>
+                                <li>内存泄漏防范</li>
+                                <li>calloc() 和 realloc()</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// 动态内存分配
+int* dynamicArray = (int*)malloc(5 * sizeof(int));
+if (dynamicArray != NULL) {
+    // 使用内存
+    for (int i = 0; i < 5; i++) {
+        dynamicArray[i] = i + 1;
+    }
+    // 释放内存
+    free(dynamicArray);
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 结构体和联合体 -->
+                    <div class="learning-section">
+                        <h2>结构体和联合体</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>结构体定义和使用</li>
+                                <li>结构体指针</li>
+                                <li>联合体特性</li>
+                                <li>位域操作</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// 结构体定义
+struct Student {
+    char name[50];
+    int age;
+    float score;
+};
+
+// 结构体使用
+struct Student student1 = {"张三", 20, 85.5};
+printf("姓名：%s\n", student1.name);
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 文件操作 -->
+                    <div class="learning-section">
+                        <h2>文件操作</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>文件的打开和关闭</li>
+                                <li>文件的读写操作</li>
+                                <li>二进制文件处理</li>
+                                <li>错误处理</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// 文件写入示例
+FILE* file = fopen("test.txt", "w");
+if (file != NULL) {
+    fprintf(file, "Hello, World!\n");
+    fclose(file);
+}
+
+// 文件读取示例
+char buffer[100];
+file = fopen("test.txt", "r");
+if (file != NULL) {
+    fgets(buffer, 100, file);
+    printf("%s", buffer);
+    fclose(file);
+}
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 

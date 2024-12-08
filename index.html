@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王小北的AI学习之旅</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <meta name="domain" content="2e3u.github.io">
+    <link rel="canonical" href="https://2e3u.github.io">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#stable-diffusion">Stable Diffusion</a></li>
+                <li><a href="#devbox-cursor">网站开发</a></li>
+                <li><a href="#c-programming">C语言学习</a></li>
+                <li><a href="pages/c/compiler.html">在线编译</a></li>
+                <li><a href="#unity-2d">Unity开发</a></li>
+                <li><a href="pages/tools.html">实用工具</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="ripple-container"></div>
+            <div class="hero-content">
+                <h1>王小北的AI学习之旅</h1>
+                <p class="hero-subtitle">探索AI的无限可能</p>
+                <div class="hero-chat">
+                    <div class="chat-field">
+                        <input type="text" placeholder="有什么想问我的..." id="hero-chat-input">
+                        <button class="hero-chat-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat-dialog">
+                    <div class="chat-messages">
+                        <!-- 消息会动态添加到这里 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stable-diffusion" class="feature-section">
+            <div class="section-content">
+                <h2>Stable Diffusion 学习历程</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content clickable" onclick="window.location.href='pages/beginner.html'">
+                            <h3>入门阶段</h3>
+                            <p>从零开始学习Stable Diffusion的基础知识，理解AI绘画的核心概念。掌握基本的提示词编写和参数调整技巧。</p>
+                            <div class="placeholder-image">基础学习阶段</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content clickable" onclick="window.location.href='pages/advanced.html'">
+                            <h3>进阶实践</h3>
+                            <p>深学习LoRA训练、模型融合等进阶技术，探索个性化模型的训练法。</p>
+                            <div class="placeholder-image">进阶学习阶段</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content clickable" onclick="window.location.href='pages/portfolio.html'">
+                            <h3>作品成果</h3>
+                            <p>运用所学知识创作个人作品，探索AI艺术的无限可能。</p>
+                            <div class="gallery">
+                                <div class="placeholder-image">作品展示 1</div>
+                                <div class="placeholder-image">作品展示 2</div>
+                                <div class="placeholder-image">作品展示 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="devbox-cursor" class="feature-section">
+            <div class="section-content">
+                <h2>Devbox + Cursor 搭建网站</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content clickable" onclick="window.location.href='pages/development.html'">
+                            <h3>开发环境搭建</h3>
+                            <p>使用现代化的云开发工具搭建个人网站。通过 Devbox 实现云端开发环境，利用 Cursor AI 辅助编码，最终部署上线完整的个人网站。</p>
+                            <div class="learning-points">
+                                <ul>
+                                    <li> Devbox 搭建云端开发环境</li>
+                                    <li>通 Cursor AI 提升编码效率</li>
+                                    <li>掌握 Node.js + Express 服务器搭建</li>
+                                    <li>学习站部署和域名配置</li>
+                                    <li>实践前端响应式设计</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Devbox</span>
+                                <span class="tech-tag">Cursor</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="c-programming" class="feature-section c-programming-section">
+            <div class="section-content">
+                <h2 class="chapter-title">C语言学习历程</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 class="chapter-subtitle">基础语法</h3>
+                        <div class="chapter-grid">
+                            <div class="timeline-content" onclick="window.location.href='pages/c/basic-types.html'">
+                                <h4>数据类型和变量</h4>
+                                <div class="learning-points">
+                                    <ul>
+                                        <li>基本数据类型（int, float, char）</li>
+                                        <li>变量声明和初始化</li>
+                                        <li>类型转换</li>
+                                        <li>常量定义</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-content" onclick="window.location.href='pages/c/operators.html'">
+                                <h4>运算符和表达式</h4>
+                                <div class="learning-points">
+                                    <ul>
+                                        <li>算术运算符</li>
+                                        <li>关系运算符</li>
+                                        <li>逻辑运���符</li>
+                                        <li>位运符</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-content" onclick="window.location.href='pages/c/control.html'">
+                                <h4>控制结构</h4>
+                                <div class="learning-points">
+                                    <ul>
+                                        <li>if-else 条件语句</li>
+                                        <li>switch-case 选择语句</li>
+                                        <li>for 循环</li>
+                                        <li>while 和 do-while 循环</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="chapter-title">进阶概念</h3>
+                        <div class="chapter-grid">
+                            <div class="timeline-content clickable" onclick="window.location.href='pages/c/arrays.html'">
+                                <h4>数组和字符串</h4>
+                                <div class="learning-points">
+                                    <ul>
+                                        <li>一维数组和多维数组</li>
+                                        <li>字符串处理函数</li>
+                                        <li>数组作为函数参数</li>
+                                        <li>字符串操作技巧</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-content clickable" onclick="window.location.href='pages/c/pointers.html'">
+                                <h4>指针</h4>
+                                <div class="learning-points">
+                                    <ul>
+                                        <li>指针基础概念</li>
+                                        <li>指与数组</li>
+                                        <li>指针与函数</li>
+                                        <li>多级指针</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-content clickable" onclick="window.location.href='pages/c/structs.html'">
+                                <h4>结构体和联合体</h4>
+                                <div class="learning-points">
+                                    <ul>
+                                        <li>结构体定义和使用</li>
+                                        <li>结构体数组</li>
+                                        <li>结构体指针</li>
+                                        <li>联合体应用</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="chapter-title">高级特性</h3>
+                        <div class="chapter-grid">
+                            <div class="timeline-content clickable" onclick="window.location.href='pages/c/files.html'">
+                                <h4>文件操作</h4>
+                                <div class="learning-points">
+                                    <ul>
+                                        <li>文件的打开与关闭</li>
+                                        <li>文件的读写操作</li>
+                                        <li>二进制文件处理</li>
+                                        <li>文件定位</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-content clickable" onclick="window.location.href='pages/c/memory.html'">
+                                <h4>内存管理</h4>
+                                <div class="learning-points">
+                                    <ul>
+                                        <li>动态内存分配</li>
+                                        <li>内存泄漏防范</li>
+                                        <li>内存对齐</li>
+                                        <li>垃圾回收</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="unity-2d" class="feature-section">
+            <div class="section-content">
+                <h2>Unity 2D游戏开发</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content clickable" onclick="window.location.href='pages/unity-basics.html'">
+                            <h3>Unity基础</h3>
+                            <p>学习Unity引擎基础知识，掌握2D游戏开发的核心概念。</p>
+                            <div class="learning-points">
+                                <ul>
+                                    <li>Unity界面和基本操作</li>
+                                    <li>游戏对象和组件</li>
+                                    <li>精灵和动画系统</li>
+                                    <li>物理系统基础</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content clickable" onclick="window.location.href='pages/unity-gameplay.html'">
+                            <h3>游戏玩法开发</h3>
+                            <p>实游戏核心玩法，包括角色控制、碰撞检测、UI系统等。</p>
+                            <div class="learning-points">
+                                <ul>
+                                    <li>角色控制系统</li>
+                                    <li>碰撞检测和触发器</li>
+                                    <li>UI系统设计</li>
+                                    <li>音频系统集成</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content clickable" onclick="window.location.href='pages/unity-project.html'">
+                            <h3>项目实战</h3>
+                            <p>开发完整的2D游戏项目，应用所学知识。</p>
+                            <div class="learning-points">
+                                <ul>
+                                    <li>游戏设计和规划</li>
+                                    <li>资源管理和优化</li>
+                                    <li>游戏测试和调试</li>
+                                    <li>项目打包发布</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="section-content">
+                <h2>关于我</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>我是王小北，一个热爱AI技术的学习者。通过不断探索和实践，记录我在AI领域的成长历程。</p>
+                        <ul class="achievement-list">
+                            <li>完成Stable Diffusion基础到进阶的学习</li>
+                            <li>创作了100+AI艺术作品</li>
+                            <li>持续学习新的AI技术</li>
+                        </ul>
+                    </div>
+                    <div class="placeholder-image profile">个人照片</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-content">
+                <h2>联系我</h2>
+                <div class="qr-codes">
+                    <div class="qr-code">
+                        <h3>微信</h3>
+                        <img src="/images/qr/wechat.jpg" alt="微信二维码" class="qr-image">
+                    </div>
+                    <div class="qr-code">
+                        <h3>QQ</h3>
+                        <img src="/images/qr/qq.jpg" alt="QQ二维码" class="qr-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="feature-section">
+            <div class="section-content">
+                <h2>实用工具</h2>
+                <div class="tools-grid">
+                    <!-- AI 工具 -->
+                    <div class="tool-card">
+                        <h3>AI 辅助工具</h3>
+                        <div class="tool-list">
+                            <a href="pages/tools.html#prompt-generator" class="tool-item">
+                                <span class="tool-icon">🎨</span>
+                                <h4>提示词生成器</h4>
+                                <p>智能生成 Stable Diffusion 提示词</p>
+                            </a>
+                            <a href="pages/tools.html#image-analyzer" class="tool-item">
+                                <span class="tool-icon">🔍</span>
+                                <h4>图像分析器</h4>
+                                <p>分析AI生成图片的参数和特征</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 开发工具 -->
+                    <div class="tool-card">
+                        <h3>开发工具</h3>
+                        <div class="tool-list">
+                            <a href="pages/c/compiler.html" class="tool-item">
+                                <span class="tool-icon">💻</span>
+                                <h4>在线编译器</h4>
+                                <p>C语言在线编译和运行</p>
+                            </a>
+                            <a href="pages/tools.html#code-formatter" class="tool-item">
+                                <span class="tool-icon">📝</span>
+                                <h4>代码格式化</h4>
+                                <p>美化和规范化代码格式</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 学习资源 -->
+                    <div class="tool-card">
+                        <h3>学习资源</h3>
+                        <div class="tool-list">
+                            <a href="pages/tools.html#tutorials" class="tool-item">
+                                <span class="tool-icon">📚</span>
+                                <h4>教程中心</h4>
+                                <p>技术学习指南和教程</p>
+                            </a>
+                            <a href="pages/tools.html#resources" class="tool-item">
+                                <span class="tool-icon">📦</span>
+                                <h4>资源下载</h4>
+                                <p>软件和学习资料</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的AI学习之旅. 保留所有权利。</p>
+        <p>备案号：正在备案中</p>
+    </footer>
+</body>
+</html> 

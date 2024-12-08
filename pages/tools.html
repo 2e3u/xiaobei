@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实用工具 - 王小北的AI学习之旅</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">返回首页</a></li>
+                <li><a href="../index.html#stable-diffusion">Stable Diffusion</a></li>
+                <li><a href="../index.html#devbox-cursor">网站开发</a></li>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">实用工具集</h1>
+                <p class="page-subtitle">提供各种学习和开发中常用的工具</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <!--AI 工具部分 -->
+                <div id="ai-tools" class="tool-section">
+                    <h2>AI 辅助工具</h2>
+                    <div class="tools-grid">
+                        <div id="prompt-generator" class="tool-card">
+                            <div class="tool-header">
+                                <span class="tool-icon">🎨</span>
+                                <h3>提示词生成器</h3>
+                            </div>
+                            <div class="tool-content">
+                                <textarea id="prompt-input" placeholder="输入你想要生成的图片描述..."></textarea>
+                                <button id="generate-prompt" class="tool-button">生成提示词</button>
+                                <div id="prompt-output" class="output-area"></div>
+                            </div>
+                        </div>
+
+                        <div id="image-analyzer" class="tool-card">
+                            <div class="tool-header">
+                                <span class="tool-icon">🔍</span>
+                                <h3>图像分析器</h3>
+                            </div>
+                            <div class="tool-content">
+                                <input type="file" id="image-upload" accept="image/*">
+                                <button id="analyze-image" class="tool-button">分析图片</button>
+                                <div id="analysis-result" class="output-area"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 开发工具部分 -->
+                <div id="dev-tools" class="tool-section">
+                    <h2>开发工具</h2>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <div class="tool-header">
+                                <span class="tool-icon">💻</span>
+                                <h3>在线编译器</h3>
+                            </div>
+                            <div class="tool-content">
+                                <a href="c/compiler.html" class="tool-link">进入C语言编译器</a>
+                            </div>
+                        </div>
+
+                        <div id="code-formatter" class="tool-card">
+                            <div class="tool-header">
+                                <span class="tool-icon">📝</span>
+                                <h3>代码格式化</h3>
+                            </div>
+                            <div class="tool-content">
+                                <textarea id="code-input" placeholder="粘贴需要格式化的代码..."></textarea>
+                                <button id="format-code" class="tool-button">格式化代码</button>
+                                <pre id="formatted-code" class="output-area"></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 学习资源部分 -->
+                <div id="learning-resources" class="tool-section">
+                    <h2>学习资源</h2>
+                    <div class="tools-grid">
+                        <div id="tutorials" class="tool-card">
+                            <div class="tool-header">
+                                <span class="tool-icon">📚</span>
+                                <h3>教程中心</h3>
+                            </div>
+                            <div class="tool-content">
+                                <ul class="resource-list">
+                                    <li><a href="#">Stable Diffusion 入门教程</a></li>
+                                    <li><a href="#">C语言基础教程</a></li>
+                                    <li><a href="#">Unity 2D游戏开发指南</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="resources" class="tool-card">
+                            <div class="tool-header">
+                                <span class="tool-icon">📦</span>
+                                <h3>资源下载</h3>
+                            </div>
+                            <div class="tool-content">
+                                <ul class="resource-list">
+                                    <li><a href="#">开发环境配置包</a></li>
+                                    <li><a href="#">学习资料合集</a></li>
+                                    <li><a href="#">实用工具集</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的AI学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 

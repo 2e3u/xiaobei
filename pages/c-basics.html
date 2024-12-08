@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C语言基础 - 王小北的学习之旅</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">返回首页</a></li>
+                <li><a href="../index.html#c-programming">C语言学习</a></li>
+                <li><a href="../index.html#unity-2d">Unity开发</a></li>
+                <li><a href="../index.html#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">C语言基础知识</h1>
+                <p class="page-subtitle">掌握C语言编程的核心概念和基础语法</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <div class="content-container">
+                    <!-- 变量和数据类型 -->
+                    <div class="learning-section">
+                        <h2>变量和数据类型</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>整型（int）、浮点型（float, double）</li>
+                                <li>字符型（char）</li>
+                                <li>变量声明和初始化</li>
+                                <li>常量定义（const）</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+int age = 25;
+float height = 175.5f;
+char grade = 'A';
+const double PI = 3.14159;
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 运算符和表达式 -->
+                    <div class="learning-section">
+                        <h2>运算符和表达式</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>算术运算符（+, -, *, /, %）</li>
+                                <li>关系运算符（>, <, ==, !=）</li>
+                                <li>逻辑运算符（&&, ||, !）</li>
+                                <li>自增自减（++, --）</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+int a = 10, b = 5;
+int sum = a + b;    // 15
+int product = a * b;  // 50
+bool isGreater = a > b;  // true
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 控制结构 -->
+                    <div class="learning-section">
+                        <h2>控制结构</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>if-else 条件语句</li>
+                                <li>switch-case 选择语句</li>
+                                <li>for 循环</li>
+                                <li>while 和 do-while 循环</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// if-else 示例
+if (score >= 60) {
+    printf("及格\n");
+} else {
+    printf("不及格\n");
+}
+
+// for 循环示例
+for (int i = 0; i < 5; i++) {
+    printf("%d ", i);
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 函数 -->
+                    <div class="learning-section">
+                        <h2>函数</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>函数定义和声明</li>
+                                <li>参数传递</li>
+                                <li>返回值</li>
+                                <li>函数原型</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+int add(int a, int b) {
+    return a + b;
+}
+
+void printMessage(char* msg) {
+    printf("%s\n", msg);
+}
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 

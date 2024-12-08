@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity游戏玩法开发 - 王小北的学习之旅</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">返回首页</a></li>
+                <li><a href="../index.html#c-programming">C语言学习</a></li>
+                <li><a href="../index.html#unity-2d">Unity开发</a></li>
+                <li><a href="../index.html#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">Unity游戏玩法开发</h1>
+                <p class="page-subtitle">实现2D游戏核心玩法机制和系统设计</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <div class="content-container">
+                    <!-- 角色控制系统 -->
+                    <div class="learning-section">
+                        <h2>角色控制系统</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>基本移动控制</li>
+                                <li>跳跃机制</li>
+                                <li>动画状态管理</li>
+                                <li>输入系统</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>角色控制器代码</h3>
+                            <pre class="code-block">
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float jumpForce = 12f;
+    private Rigidbody2D rb;
+    private bool isGrounded;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        // 水平移动
+        float moveX = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
+
+        // 跳跃控制
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            isGrounded = false;
+        }
+    }
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- UI系统设计 -->
+                    <div class="learning-section">
+                        <h2>UI系统设计</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>Canvas和UI元素</li>
+                                <li>生命值和得分显示</li>
+                                <li>菜单系统</li>
+                                <li>UI动画效果</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>UI管理器代码</h3>
+                            <pre class="code-block">
+public class UIManager : MonoBehaviour
+{
+    [SerializeField] private Text scoreText;
+    [SerializeField] private Text healthText;
+    [SerializeField] private GameObject pauseMenu;
+
+    public void UpdateScore(int score)
+    {
+        scoreText.text = $"分数: {score}";
+    }
+
+    public void UpdateHealth(int health)
+    {
+        healthText.text = $"生命值: {health}";
+    }
+
+    public void TogglePauseMenu()
+    {
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
+        Time.timeScale = pauseMenu.activeSelf ? 0 : 1;
+    }
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 音频系统 -->
+                    <div class="learning-section">
+                        <h2>音频系统</h2>
+                        <div class="learning-points">
+                            <ul>
+                                <li>背景音乐管理</li>
+                                <li>音效系统</li>
+                                <li>音频混音器</li>
+                                <li>音量控制</li>
+                            </ul>
+                        </div>
+                        <div class="code-example">
+                            <h3>音频管理器代码</h3>
+                            <pre class="code-block">
+public class AudioManager : MonoBehaviour
+{
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioClip[] soundEffects;
+
+    public void PlaySound(int soundIndex)
+    {
+        if (soundIndex < soundEffects.Length)
+        {
+            sfxSource.PlayOneShot(soundEffects[soundIndex]);
+        }
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+}
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 

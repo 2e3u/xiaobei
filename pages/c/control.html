@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C语言控制结构 - 王小北的学习之旅</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">返回首页</a></li>
+                <li><a href="../../index.html#c-programming">C语言学习</a></li>
+                <li><a href="../../index.html#unity-2d">Unity开发</a></li>
+                <li><a href="../../pages/tools.html">实用工具</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">控制结构</h1>
+                <p class="page-subtitle">掌握C语言中的条件语句和循环结构</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <div class="content-container">
+                    <!-- if-else 条件语句 -->
+                    <div class="learning-section">
+                        <h2>if-else 条件语句</h2>
+                        <div class="concept-explanation">
+                            <p>根据条件执行不同的代码块。</p>
+                        </div>
+                        <div class="code-example">
+                            <h3>基本语法</h3>
+                            <pre class="code-block">
+// 简单if语句
+if (score >= 60) {
+    printf("及格\n");
+}
+
+// if-else语句
+if (age >= 18) {
+    printf("成年人\n");
+} else {
+    printf("未成年\n");
+}
+
+// if-else if-else语句
+if (score >= 90) {
+    printf("优秀\n");
+} else if (score >= 80) {
+    printf("良好\n");
+} else if (score >= 60) {
+    printf("及格\n");
+} else {
+    printf("不及格\n");
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- switch-case 语句 -->
+                    <div class="learning-section">
+                        <h2>switch-case 语句</h2>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+int day = 3;
+switch (day) {
+    case 1:
+        printf("星期一\n");
+        break;
+    case 2:
+        printf("星期二\n");
+        break;
+    case 3:
+        printf("星期三\n");
+        break;
+    default:
+        printf("其他日期\n");
+}
+                            </pre>
+                        </div>
+                        <div class="key-points">
+                            <h3>注意事项</h3>
+                            <ul>
+                                <li>switch只能用于整数类型的判断</li>
+                                <li>每个case后需要加break防止穿透</li>
+                                <li>default是可选的默认分支</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- for循环 -->
+                    <div class="learning-section">
+                        <h2>for循环</h2>
+                        <div class="code-example">
+                            <h3>基本用法</h3>
+                            <pre class="code-block">
+// 基本for循环
+for (int i = 0; i < 5; i++) {
+    printf("%d ", i);
+}
+
+// 循环遍历数组
+int arr[] = {1, 2, 3, 4, 5};
+for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++) {
+    printf("%d ", arr[i]);
+}
+
+// 嵌套for循环（打印乘法表）
+for (int i = 1; i <= 9; i++) {
+    for (int j = 1; j <= i; j++) {
+        printf("%d×%d=%d ", j, i, i*j);
+    }
+    printf("\n");
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- while和do-while循环 -->
+                    <div class="learning-section">
+                        <h2>while和do-while循环</h2>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// while循环
+int count = 0;
+while (count < 5) {
+    printf("%d ", count);
+    count++;
+}
+
+// do-while循环（至少执行一次）
+int num;
+do {
+    printf("请输入一个正数: ");
+    scanf("%d", &num);
+} while (num <= 0);
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 控制语句 -->
+                    <div class="learning-section">
+                        <h2>控制语句</h2>
+                        <div class="code-example">
+                            <h3>break和continue</h3>
+                            <pre class="code-block">
+// break示例
+for (int i = 0; i < 10; i++) {
+    if (i == 5) break;  // 到5就结束循环
+    printf("%d ", i);
+}
+
+// continue示例
+for (int i = 0; i < 10; i++) {
+    if (i % 2 == 0) continue;  // 跳过偶数
+    printf("%d ", i);
+}
+                            </pre>
+                        </div>
+                        <div class="practice-exercise">
+                            <h3>练习题</h3>
+                            <div class="exercise">
+                                <p>编写一个程序，打印出1到100之间的所有素数：</p>
+                                <pre class="code-block">
+// 请完成此代码
+for (int i = 2; i <= 100; i++) {
+    // 判断i是否为素数
+    
+}
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 

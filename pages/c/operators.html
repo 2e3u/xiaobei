@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C语言运算符和表达式 - 王小北的学习之旅</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">返回首页</a></li>
+                <li><a href="../../index.html#c-programming">C语言学习</a></li>
+                <li><a href="../../index.html#unity-2d">Unity开发</a></li>
+                <li><a href="../../pages/tools.html">实用工具</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">运算符和表达式</h1>
+                <p class="page-subtitle">掌握C语言中各种运算符的使用和表达式的计算</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <div class="content-container">
+                    <!-- 算术运算符 -->
+                    <div class="learning-section">
+                        <h2>算术运算符</h2>
+                        <div class="concept-explanation">
+                            <p>用于执行基本的数学运算。</p>
+                        </div>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+int a = 10, b = 3;
+
+// 基本运算
+int sum = a + b;      // 加法: 13
+int diff = a - b;     // 减法: 7
+int product = a * b;  // 乘法: 30
+int quotient = a / b; // 除法: 3
+int remainder = a % b;// 取余: 1
+
+// 自增自减
+int x = 5;
+x++;                  // 后自增: x = 6
+++x;                  // 前自增: x = 7
+x--;                  // 后自减: x = 6
+--x;                  // 前自减: x = 5
+                            </pre>
+                        </div>
+                        <div class="key-points">
+                            <h3>注意事项</h3>
+                            <ul>
+                                <li>整数除法会舍弃小数部分</li>
+                                <li>取余运算只适用于整数</li>
+                                <li>前缀和后缀自增/自减的���别</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 关系运算符 -->
+                    <div class="learning-section">
+                        <h2>关系运算符</h2>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+int x = 5, y = 8;
+
+// 比较运算
+bool isEqual = (x == y);    // 等于: false
+bool notEqual = (x != y);   // 不等于: true
+bool isLess = (x < y);      // 小于: true
+bool isGreater = (x > y);   // 大于: false
+bool lessEqual = (x <= y);  // 小于等于: true
+bool greaterEqual = (x >= y);// 大于等于: false
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 逻辑运算符 -->
+                    <div class="learning-section">
+                        <h2>逻辑运算符</h2>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+int age = 25;
+bool hasID = true;
+
+// 逻辑运算
+bool canDrink = (age >= 18) && hasID;  // 逻辑与
+bool isChild = (age < 12) || (age > 65);// 逻辑或
+bool isNotAdult = !(age >= 18);        // 逻辑非
+                            </pre>
+                        </div>
+                        <div class="practice-exercise">
+                            <h3>练习题</h3>
+                            <div class="exercise">
+                                <p>编写一个表达式，判断一个年份是否为闰年：</p>
+                                <pre class="code-block">
+int year = 2024;
+bool isLeapYear = _______; // 请完成此表达式
+// 提示：闰年规则
+// 1. 能被4整除但不能被100整除
+// 2. 或者能被400整除
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 位运算符 -->
+                    <div class="learning-section">
+                        <h2>位运算符</h2>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+unsigned int a = 60;  // 二进制: 0011 1100
+unsigned int b = 13;  // 二进制: 0000 1101
+
+// 位运算
+int c = a & b;       // 按位与: 0000 1100
+int d = a | b;       // 按位或: 0011 1101
+int e = a ^ b;       // 按位异或: 0011 0001
+int f = ~a;          // 按位取反: 1100 0011
+int g = a << 2;      // 左移: 1111 0000
+int h = a >> 2;      // 右移: 0000 1111
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 

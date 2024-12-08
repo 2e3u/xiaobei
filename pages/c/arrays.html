@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C语言数组和字符串 - 王小北的学习之旅</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">返回首页</a></li>
+                <li><a href="../../index.html#c-programming">C语言学习</a></li>
+                <li><a href="../../index.html#unity-2d">Unity开发</a></li>
+                <li><a href="../../pages/tools.html">实用工具</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">数组和字符串</h1>
+                <p class="page-subtitle">掌握C语言中数组的使用和字符串处理</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <div class="content-container">
+                    <!-- 一维数组 -->
+                    <div class="learning-section">
+                        <h2>一维数组</h2>
+                        <div class="concept-explanation">
+                            <p>数组是相同类型元素的有序集合。</p>
+                        </div>
+                        <div class="code-example">
+                            <h3>数组声明和初始化</h3>
+                            <pre class="code-block">
+// 数组声明
+int numbers[5];  // 声明一个包含5个整数的数组
+
+// 数组初始化
+int scores[] = {85, 92, 78, 90, 88};  // 自动确定大小
+int days[7] = {1, 2, 3};  // 其余元素自动初始化为0
+
+// 数组访问
+scores[0] = 95;  // 修改第一个元素
+printf("第一个分数：%d\n", scores[0]);
+
+// 使用循环遍历数组
+for(int i = 0; i < 5; i++) {
+    printf("%d ", scores[i]);
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 二维数组 -->
+                    <div class="learning-section">
+                        <h2>二维数组</h2>
+                        <div class="code-example">
+                            <h3>示例代码</h3>
+                            <pre class="code-block">
+// 二维数组��明和初始化
+int matrix[3][4] = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12}
+};
+
+// 访问二维数组元素
+printf("%d\n", matrix[1][2]);  // 输出：7
+
+// 使用嵌套循环遍历二维数组
+for(int i = 0; i < 3; i++) {
+    for(int j = 0; j < 4; j++) {
+        printf("%d ", matrix[i][j]);
+    }
+    printf("\n");
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 字符串基础 -->
+                    <div class="learning-section">
+                        <h2>字符串基础</h2>
+                        <div class="code-example">
+                            <h3>字符串声明和操作</h3>
+                            <pre class="code-block">
+// 字符串声明
+char str1[] = "Hello";  // 自动添加结束符'\0'
+char str2[10] = "World";  // 指定大小
+
+// 字符串输入输出
+char name[50];
+printf("请输入名字：");
+scanf("%s", name);  // 注意：不需要&符号
+
+// 常用字符串函数
+#include <string.h>
+
+// 获取字符串长度
+int len = strlen(str1);  // 返回5
+
+// 字符串拷贝
+char dest[20];
+strcpy(dest, str1);  // 将str1拷贝到dest
+
+// 字符串连接
+strcat(dest, str2);  // 连接str2到dest末尾
+
+// 字符串比较
+int result = strcmp(str1, str2);  // 比较两个字���串
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 字符串进阶操作 -->
+                    <div class="learning-section">
+                        <h2>字符串进阶操作</h2>
+                        <div class="code-example">
+                            <h3>字符串处理示例</h3>
+                            <pre class="code-block">
+// 字符串分割
+char str[] = "C,Java,Python";
+char *token = strtok(str, ",");
+while (token != NULL) {
+    printf("%s\n", token);
+    token = strtok(NULL, ",");
+}
+
+// 字符串查找
+char text[] = "Hello World";
+char *ptr = strchr(text, 'o');  // 查找字符
+if (ptr != NULL) {
+    printf("找到字符'o'的位置：%ld\n", ptr - text);
+}
+
+// 子字符串查找
+char *sub = strstr(text, "World");  // 查找子串
+if (sub != NULL) {
+    printf("找到子串的位置：%ld\n", sub - text);
+}
+                            </pre>
+                        </div>
+                        <div class="practice-exercise">
+                            <h3>练习题</h3>
+                            <div class="exercise">
+                                <p>编写一个函数，判断一个字符串是否为回文：</p>
+                                <pre class="code-block">
+bool isPalindrome(const char *str) {
+    // 请完成此函数
+    // 提示：回文是指正读和反读都相同的字符串
+    // 例如："level", "radar" 都是回文
+}
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 

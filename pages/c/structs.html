@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C语言结构体和联合体 - 王小北的学习之旅</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">返回首页</a></li>
+                <li><a href="../../index.html#c-programming">C语言学习</a></li>
+                <li><a href="../../index.html#unity-2d">Unity开发</a></li>
+                <li><a href="../../pages/tools.html">实用工具</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="section-content">
+                <h1 class="page-title">结构体和联合体</h1>
+                <p class="page-subtitle">掌握C语言中的复杂数据类型</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="section-content">
+                <div class="content-container">
+                    <!-- 结构体基础 -->
+                    <div class="learning-section">
+                        <h2>结构体基础</h2>
+                        <div class="concept-explanation">
+                            <p>结构体是一种用户自定义的数据类型，可以存储不同类型的数据。</p>
+                        </div>
+                        <div class="code-example">
+                            <h3>结构体定义和使用</h3>
+                            <pre class="code-block">
+// 定义结构体
+struct Student {
+    char name[50];
+    int age;
+    float score;
+};
+
+// 声明和初始化
+struct Student student1 = {"张三", 20, 85.5};
+
+// 访问结构体成员
+printf("姓名：%s\n", student1.name);
+printf("年龄：%d\n", student1.age);
+printf("分数：%.1f\n", student1.score);
+
+// 结构体数组
+struct Student class[3] = {
+    {"张三", 20, 85.5},
+    {"李四", 19, 92.0},
+    {"王五", 21, 78.5}
+};
+                            </pre>
+                        </div>
+                        <div class="code-example">
+                            <h3>结构体的高级用法</h3>
+                            <pre class="code-block">
+// 结构体中的函数指针
+struct Calculator {
+    int (*add)(int, int);
+    int (*subtract)(int, int);
+    float (*divide)(float, float);
+};
+
+// 实现计算函数
+int add(int a, int b) { return a + b; }
+int subtract(int a, int b) { return a - b; }
+float divide(float a, float b) { return a / b; }
+
+// 初始化结构体
+struct Calculator calc = {add, subtract, divide};
+
+// 使用结构体中的函数
+printf("10 + 5 = %d\n", calc.add(10, 5));
+printf("10 - 5 = %d\n", calc.subtract(10, 5));
+printf("10 / 3 = %.2f\n", calc.divide(10.0, 3.0));
+                            </pre>
+                        </div>
+                        <div class="practice-exercise">
+                            <h3>练习题1：时间结构体</h3>
+                            <pre class="code-block">
+struct Time {
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+// 实现以下函数：
+// 1. 将时间转换为总秒数
+int timeToSeconds(struct Time t);
+
+// 2. 将总秒数转换为时间结构体
+struct Time secondsToTime(int seconds);
+
+// 3. 计算两个时间的差值（返回秒数）
+int timeDifference(struct Time t1, struct Time t2);
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 结构体指针 -->
+                    <div class="learning-section">
+                        <h2>结构体指针</h2>
+                        <div class="code-example">
+                            <h3>使用指针访问结构体</h3>
+                            <pre class="code-block">
+// 结构体指针
+struct Student *ptr = &student1;
+
+// 通过指针访问成员（两种方式）
+printf("姓名：%s\n", (*ptr).name);
+printf("年龄：%d\n", ptr->age);  // 箭头操作符
+
+// 动态分配结构体
+struct Student *newStudent = (struct Student*)malloc(sizeof(struct Student));
+strcpy(newStudent->name, "赵六");
+newStudent->age = 22;
+newStudent->score = 88.5;
+
+// 使用完后释放内存
+free(newStudent);
+                            </pre>
+                        </div>
+                        <div class="code-example">
+                            <h3>使用结构体实现链表</h3>
+                            <pre class="code-block">
+// 定义链表节点
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// 创建新节点
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// 在链表头部插入节点
+struct Node* insertFront(struct Node* head, int data) {
+    struct Node* newNode = createNode(data);
+    newNode->next = head;
+    return newNode;
+}
+
+// 打印链表
+void printList(struct Node* head) {
+    struct Node* current = head;
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 嵌套结构体 -->
+                    <div class="learning-section">
+                        <h2>嵌套结构体</h2>
+                        <div class="code-example">
+                            <h3>结构体中包含结构体</h3>
+                            <pre class="code-block">
+// 定义地址结构体
+struct Address {
+    char city[50];
+    char street[100];
+    int postcode;
+};
+
+// 包含地址的学生结构体
+struct StudentInfo {
+    char name[50];
+    int age;
+    struct Address addr;  // 嵌套结构体
+};
+
+// 初始化嵌套结构体
+struct StudentInfo student = {
+    "张三",
+    20,
+    {"北京", "朝阳区xxx街", 100000}
+};
+
+// 访问嵌套成
+printf("城市：%s\n", student.addr.city);
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 联合体 -->
+                    <div class="learning-section">
+                        <h2>联合体</h2>
+                        <div class="code-example">
+                            <h3>联合体的使用</h3>
+                            <pre class="code-block">
+// 定义联合体
+union Data {
+    int i;
+    float f;
+    char str[20];
+};
+
+// 使用联合体
+union Data data;
+data.i = 10;
+printf("整数：%d\n", data.i);
+
+data.f = 3.14;
+printf("浮点数：%.2f\n", data.f);
+// 注意：此时data.i的值已经被覆盖
+
+// 联合体大小
+printf("联合体大小：%lu\n", sizeof(union Data));
+// 等于最大成员的大小
+                            </pre>
+                        </div>
+                        <div class="code-example">
+                            <h3>联合体实际应用</h3>
+                            <pre class="code-block">
+// 用联合体实现类型转换
+union NumberConverter {
+    int i;
+    float f;
+    unsigned char bytes[4];
+};
+
+// 示例：查看浮点数的字节表示
+union NumberConverter num;
+num.f = 3.14f;
+
+printf("浮点数: %.2f\n", num.f);
+printf("字节表示: ");
+for(int i = 0; i < 4; i++) {
+    printf("%02X ", num.bytes[i]);
+}
+printf("\n");
+                            </pre>
+                        </div>
+                        <div class="key-points">
+                            <h3>注意事项</h3>
+                            <ul>
+                                <li>联合体所有成员共享同一块内存</li>
+                                <li>同一时间只能使用一个成员</li>
+                                <li>常用于节省内存空间</li>
+                            </ul>
+                        </div>
+                        <div class="practice-exercise">
+                            <h3>练习题2：数据包解析</h3>
+                            <pre class="code-block">
+// 实现一个数据包解析器
+union PacketData {
+    struct {
+        unsigned char type;
+        unsigned char length;
+        unsigned short value;
+    } header;
+    unsigned char raw[4];
+};
+
+// 请实现以下函数：
+// 1. 创建数据包
+union PacketData createPacket(unsigned char type, unsigned short value);
+
+// 2. 解析数据包
+void parsePacket(const union PacketData* packet);
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- 位域 -->
+                    <div class="learning-section">
+                        <h2>位域</h2>
+                        <div class="code-example">
+                            <h3>使用位域节省内存</h3>
+                            <pre class="code-block">
+// 定义位域结构体
+struct Flags {
+    unsigned int is_active : 1;    // 1位
+    unsigned int is_urgent : 1;    // 1位
+    unsigned int priority : 3;     // 3位
+};
+
+// 使用位域
+struct Flags flags = {1, 0, 5};
+printf("活动状态：%d\n", flags.is_active);
+printf("优先级：%d\n", flags.priority);
+                            </pre>
+                        </div>
+                        <div class="practice-exercise">
+                            <h3>练习题</h3>
+                            <div class="exercise">
+                                <p>实现一个简单的图书管理系统：</p>
+                                <pre class="code-block">
+struct Book {
+    char title[100];
+    char author[50];
+    float price;
+    int year;
+};
+
+// 请实现以下函数：
+void addBook(struct Book *library, int *count);
+void displayBook(const struct Book *book);
+void searchBook(struct Book *library, int count, const char *title);
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 王小北的学习之旅. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 
