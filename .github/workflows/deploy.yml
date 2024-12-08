@@ -7,28 +7,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: ${{ vars.VERCEL_URL }}
-    env:
-      NODE_ENV: ${{ vars.NODE_ENV }}
-      VERCEL_URL: ${{ vars.VERCEL_URL }}
     steps:
     - uses: actions/checkout@v2
     
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
-        
-    - name: Install Dependencies
-      run: npm install
-      
-    - name: Build
-      env:
-        SITE_URL: ${{ vars.VERCEL_URL }}
-      run: npm run build
-      
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
